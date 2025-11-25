@@ -55,8 +55,8 @@ graph TD
     Gateway -->|Consulta Médica| Engine[🧠 FastAPI RAG Engine]
     
     subgraph "Nube Azure AI"
-        Engine -->|Vector Search| Search[🔎 Azure Cognitive Search]
-        Engine -->|Generación| OpenAI[🤖 Azure OpenAI GPT-4o]
+        Engine -->|Vector Search| Search[🔎 Azure AI Search]
+        Engine -->|Generación| OpenAI[🤖 Azure OpenAI GPT-3.5 Turbo]
         Blob[📄 Azure Blob Storage] -->|Trigger| Func[⚡ Azure Function]
         Func -->|Indexación Auto| Search
     end
